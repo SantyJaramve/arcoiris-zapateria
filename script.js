@@ -69,7 +69,7 @@
     }, observerOptions);
 
     const animatedElements = document.querySelectorAll(
-        '.problema-item, .servicio-card, .galeria-item, .proceso-step, .testimonio-card'
+        '.problema-item, .servicio-card, .proceso-step, .testimonio-card'
     );
 
     animatedElements.forEach(el => {
@@ -108,24 +108,31 @@
         });
     });
 
-    const galeriaItems = document.querySelectorAll('.galeria-item');
-    galeriaItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            const images = item.querySelectorAll('.galeria-images img');
-            if (images.length >= 2) {
-                images[0].style.width = '100%';
-                images[1].style.width = '0%';
-            }
-        });
+    function initGallery() {
+        const slides = document.querySelectorAll('.galeria-slide');
+        const navItems = document.querySelectorAll('.galeria-nav-item');
 
-        item.addEventListener('mouseleave', () => {
-            const images = item.querySelectorAll('.galeria-images img');
-            if (images.length >= 2) {
-                images[0].style.width = '50%';
-                images[1].style.width = '50%';
-            }
+        function activateSlide(index) {
+            slides.forEach((s, i) => {
+                s.classList.toggle('active', i === index);
+            });
+            navItems.forEach((n, i) => {
+                n.classList.toggle('active', i === index);
+            });
+        }
+
+        navItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = parseInt(item.dataset.target);
+                activateSlide(target);
+            });
         });
-    });
+    }
+
+    if (document.querySelector('.galeria-slide')) {
+        initGallery();
+    }
 
     const lazyImages = document.querySelectorAll('img[loading="lazy"]');
     if ('IntersectionObserver' in window) {

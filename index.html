@@ -51,6 +51,9 @@
     </header>
 
 <section class="hero" id="hero">
+        <video class="hero-video" autoplay muted loop playsinline poster="imagenes/hero.jpg">
+            <source src="vid/video.mp4" type="video/mp4">
+        </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <span class="hero-tag">Arcoiris Zapatería</span>
@@ -204,54 +207,93 @@
     </section>
 
     <section class="galeria" id="galeria">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Galería</span>
-                <h2 class="section-title">ANTES / DESPUÉS</h2>
-                <p class="section-subtitle">Transformaciones reales de calzado restaurado</p>
+        <div class="galeria-header">
+            <span class="section-tag">Galería</span>
+            <h2 class="section-title">ANTES / DESPUÉS</h2>
+            <p class="section-subtitle">Transformaciones reales de calzado restaurado</p>
+        </div>
+
+        <div class="galeria-stage">
+            <div class="galeria-slides">
+                <div class="galeria-slide active" data-index="0">
+                    <div class="duo">
+                        <div class="duo-image">
+                            <img src="imagenes/cambio_suela1.PNG" alt="Antes" loading="lazy">
+                            <span class="duo-label">ANTES</span>
+                        </div>
+                        <div class="duo-divider"></div>
+                        <div class="duo-image">
+                            <img src="imagenes/cambio_suela2.PNG" alt="Después" loading="lazy">
+                            <span class="duo-label">DESPUÉS</span>
+                        </div>
+                    </div>
+                    <div class="galeria-slide-info">
+                        <span class="galeria-slide-number">01</span>
+                        <h3>Restauración de suela</h3>
+                    </div>
+                </div>
+
+                <div class="galeria-slide" data-index="1">
+                    <div class="duo">
+                        <div class="duo-image">
+                            <img src="imagenes/cambio_suela1.PNG" alt="Antes" loading="lazy">
+                            <span class="duo-label">ANTES</span>
+                        </div>
+                        <div class="duo-divider"></div>
+                        <div class="duo-image">
+                            <img src="imagenes/cambio_suela2.PNG" alt="Después" loading="lazy">
+                            <span class="duo-label">DESPUÉS</span>
+                        </div>
+                    </div>
+                    <div class="galeria-slide-info">
+                        <span class="galeria-slide-number">02</span>
+                        <h3>Cambio de taco</h3>
+                    </div>
+                </div>
+
+                <div class="galeria-slide" data-index="2">
+                    <div class="duo">
+                        <div class="duo-image">
+                            <img src="imagenes/cambio_suela1.PNG" alt="Antes" loading="lazy">
+                            <span class="duo-label">ANTES</span>
+                        </div>
+                        <div class="duo-divider"></div>
+                        <div class="duo-image">
+                            <img src="imagenes/cambio_suela2.PNG" alt="Después" loading="lazy">
+                            <span class="duo-label">DESPUÉS</span>
+                        </div>
+                    </div>
+                    <div class="galeria-slide-info">
+                        <span class="galeria-slide-number">03</span>
+                        <h3>Restauración completa</h3>
+                    </div>
+                </div>
+
+                <div class="galeria-slide" data-index="3">
+                    <div class="duo">
+                        <div class="duo-image">
+                            <img src="imagenes/cambio_suela1.PNG" alt="Antes" loading="lazy">
+                            <span class="duo-label">ANTES</span>
+                        </div>
+                        <div class="duo-divider"></div>
+                        <div class="duo-image">
+                            <img src="imagenes/cambio_suela2.PNG" alt="Después" loading="lazy">
+                            <span class="duo-label">DESPUÉS</span>
+                        </div>
+                    </div>
+                    <div class="galeria-slide-info">
+                        <span class="galeria-slide-number">04</span>
+                        <h3>Costura reforzada</h3>
+                    </div>
+                </div>
             </div>
-            
-            <div class="galeria-grid">
-                <div class="galeria-item" data-delay="0">
-                    <div class="galeria-images">
-                        <img src="imagenes/antes1.jpg" alt="Zapato antes de reparar" loading="lazy">
-                        <img src="imagenes/despues1.jpg" alt="Zapato después de reparar" loading="lazy">
-                    </div>
-                    <div class="galeria-overlay">
-                        <span>Restauración de suela</span>
-                    </div>
-                </div>
-                
-                <div class="galeria-item" data-delay="1">
-                    <div class="galeria-images">
-                        <img src="imagenes/antes1.jpg" alt="Zapato antes" loading="lazy">
-                        <img src="imagenes/despues1.jpg" alt="Zapato después" loading="lazy">
-                    </div>
-                    <div class="galeria-overlay">
-                        <span>Cambio de taco</span>
-                    </div>
-                </div>
-                
-                <div class="galeria-item" data-delay="2">
-                    <div class="galeria-images">
-                        <img src="imagenes/antes1.jpg" alt="Bota antes" loading="lazy">
-                        <img src="imagenes/despues1.jpg" alt="Bota después" loading="lazy">
-                    </div>
-                    <div class="galeria-overlay">
-                        <span>Restauración completa</span>
-                    </div>
-                </div>
-                
-                <div class="galeria-item" data-delay="3">
-                    <div class="galeria-images">
-                        <img src="imagenes/antes1.jpg" alt="Zapato antes" loading="lazy">
-                        <img src="imagenes/despues1.jpg" alt="Zapato después" loading="lazy">
-                    </div>
-                    <div class="galeria-overlay">
-                        <span>Costura reforzada</span>
-                    </div>
-                </div>
-            </div>
+
+            <nav class="galeria-nav">
+                <a href="#" class="galeria-nav-item active" data-target="0">01</a>
+                <a href="#" class="galeria-nav-item" data-target="1">02</a>
+                <a href="#" class="galeria-nav-item" data-target="2">03</a>
+                <a href="#" class="galeria-nav-item" data-target="3">04</a>
+            </nav>
         </div>
     </section>
 
